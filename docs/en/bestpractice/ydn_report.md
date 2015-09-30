@@ -1,4 +1,4 @@
-# Yahoo! JAPAN Display AD Network Report (Ver.4.6 - Ver.5.0)
+# Yahoo! JAPAN Display AD Network Report  
 ## What is “Performance Report”?
 Performance Report is a function of confirming performance in Campaign, Ad Group, Ad, Keyword, etc.   
 To display report, creation of report and report template will be required.  

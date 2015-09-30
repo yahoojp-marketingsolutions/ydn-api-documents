@@ -6,7 +6,6 @@ ReportSelectorオブジェクトは、操作の対象とするレポートです
 | フィールド | データ型 | 説明 | 制限 | 
 |---|---|---|---|
 | accountId| xsd: long| アカウントIDです。| Req |
-| reportIds[]| xsd: long| レポートIDです。| Opt |
 | reportJobIds[]| xsd: long| レポートジョブIDです。| Opt |
 | reportJobStatuses| enum <a href="../data/ReportJobStatus.md">ReportJobStatus[]</a>| レポートジョブの処理状況を確認します。| Opt |
 | paging| <a href="../data/Paging.md">Paging</a>| レスポンスとして戻されるページです。| Opt |

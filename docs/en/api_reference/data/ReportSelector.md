@@ -6,6 +6,7 @@ The ReportSelector object serves the operation target report.
 | Field | Data Type | Description | Restriction | 
 |---|---|---|---|
 | accountId| xsd: long| The account ID.| Req |
+| reportIds[]| xsd: long| The report ID.| Opt |
 | reportJobIds[]| xsd: long| The report job ID.| Opt |
 | reportJobStatuses| enum <a href="../data/ReportJobStatus.md">ReportJobStatus[]</a>| Checks the report job process status.| Opt |
 | paging| <a href="../data/Paging.md">Paging</a>| This page comes back as a response.| Opt |

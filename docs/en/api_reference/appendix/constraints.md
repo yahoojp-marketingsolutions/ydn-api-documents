@@ -30,7 +30,7 @@ ConversionTrackerService | get                  | 500                    | 1000 
 ||mutate(SET)              | 100                  | -                      | -             
 DictionaryService        | getDisapprovalReason | -                      | all            | ○     
 ||getGeographicLocation    | -                    | all                    | -             
-||getInterestCatgeory      | -                    | all                    | -             
+vgetInterestCatgeory      | -                    | all                    | -             
 ||getSiteCategory          | -                    | all                    | -             
 ||getColorSet              | -                    | all                    | -             
 LocationService          | get                  | -                      | 1              | -     

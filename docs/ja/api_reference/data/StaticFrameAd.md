@@ -10,7 +10,7 @@ StaticFrameAdオブジェクトは、広告枠サイズ固定広告の情報を�
 | description| string| 1| 0| ○| Req(size=300X250)| Opt(size=300X250)| Ignore| 説明文です。 |
 | url| string| 1| 0| ○| Req(size=300X250)| Opt(size=300X250)| Ignore| リンク先URLです。 |
 | displayUrl| string| 1| 0| ○| Req(size=300X250)| Opt(size=300X250)| Ignore| 表示URLです。 |
-| layout| string| 1| 0| ○| Opt(size=300X250)| Req(size=300X250)<br>Not updatable| Ignore| 広告レイアウトです。<br>記載可能な内容は、<a href="./AdLayout.md">AdLayout</a>を参考ください。|
+| layout| string| 1| 0| ○| Opt(size=300X250)| Req(size=300X250)<br>Not updatable| Ignore| 広告レイアウトです。<br>記載可能な内容は、<a href="./AdLayout.md">AdLayout</a>を参考ください。 |
 | buttonText| enum <a href="./ButtonText.md">ButtonText</a>| 1| 0| ○| Opt(size=300X250)| Opt(size=300X250)| Ignore| 広告のボタンに表示されるテキストです。 |
 | principal| string| 1| 0| ○| Req(size=300X250)| Opt(size=300X250)| Ignore| 広告の主体者表記です。 |
 | logoMediaId| long| 1| 0| ○| Opt(size=300X250)| Opt(size=300X250)| Ignore| ロゴの画像IDです。 |

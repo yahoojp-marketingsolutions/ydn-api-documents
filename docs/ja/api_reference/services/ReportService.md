@@ -626,27 +626,27 @@ xmlns:ns1="http://im.yahooapis.jp/V4">
 
 ##### ＜レスポンスサンプル＞
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?> 
 <SOAP-ENV:Envelope
  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
- xmlns:ns1="http://im.yahooapis.jp/V5"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <SOAP-ENV:Header>
-        <ns1:ResponseHeader>
-            <ns1:service>ReportService</ns1:service>
-            <ns1:remainingQuota>100</ns1:remainingQuota>
-            <ns1:quotaUsedForThisRequest>1</ns1:quotaUsedForThisRequest>
-            <ns1:timeTakenMillis>0.0173</ns1:timeTakenMillis>
-        </ns1:ResponseHeader>
-    </SOAP-ENV:Header>
-    <SOAP-ENV:Body>
-        <ns1:getClosedDateResponse>
-            <ns1:rval>
-                <ns1:operationSucceeded>true</ns1:operationSucceeded>
-                <ns1:closedDate>20120303</ns1:closedDate>
-            </ns1:rval>
-        </ns1:getClosedDateResponse>
-    </SOAP-ENV:Body>
+ xmlns:ns1="http://im.yahooapis.jp/V4"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+    <SOAP-ENV:Header> 
+        <ns1:ResponseHeader> 
+            <ns1:service>ReportService</ns1:service> 
+            <ns1:remainingQuota>100</ns1:remainingQuota> 
+            <ns1:quotaUsedForThisRequest>1</ns1:quotaUsedForThisRequest> 
+            <ns1:timeTakenMillis>0.0173</ns1:timeTakenMillis> 
+        </ns1:ResponseHeader> 
+    </SOAP-ENV:Header> 
+    <SOAP-ENV:Body> 
+        <ns1:getClosedDateResponse> 
+            <ns1:rval> 
+                <ns1:operationSucceeded>true</ns1:operationSucceeded> 
+                <ns1:closedDate>20120303</ns1:closedDate> 
+            </ns1:rval> 
+        </ns1:getClosedDateResponse> 
+    </SOAP-ENV:Body> 
 </SOAP-ENV:Envelope>
 ```
 <a rel="license" href="http://creativecommons.org/licenses/by-nd/2.1/jp/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/2.1/jp/88x31.png" /></a><br />この 作品 は <a rel="license" href="http://creativecommons.org/licenses/by-nd/2.1/jp/">クリエイティブ・コモンズ 表示 - 改変禁止 2.1 日本 ライセンスの下に提供されています。</a>

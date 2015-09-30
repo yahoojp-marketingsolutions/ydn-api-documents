@@ -1,146 +1,204 @@
 # リリースノート
 ## リリースバージョン　　
-5.1 (WSDLバージョン: 5.1.0)
+5.0 (WSDLバージョン: 5.0.0)
 ## バージョンアップの種類　　
-マイナーバージョンアップ 
+メジャーバージョンアップ 
 ## 本リリースの主な内容
-#### 1. レポート機能の改善 
-レポート機能の変更および追加を行いました。<br>
-<br>
-※リクエストされたレポート項目（フィールド）の組み合わせにより、レポートの種類（レポートカテゴリ）を自動的に判別してレポートを作成するように機能を変更しました。<br>
-（前バージョンまで提供しておりました、レポート種別（レポートタイプ）を指定してレポートを作成する機能は、本バージョンからご利用いただけません。）<br>
-※レポート作成機能の変更に伴い、5種類の「レポートカテゴリ」を新設しました。  <br>
-
-レポートカテゴリ | カテゴリに含まれるレポート
----------------- | ------------------------------------
-AD | ・アカウントレポート<br>・キャンペーンレポート<br>・広告グループレポート<br>・広告レポート<br>・リンク先URLレポート
-INTEREST_CATEGORY | インタレストカテゴリーレポート
-SITE_CATEGORY | サイトカテゴリーレポート
-URL | 配信先URLレポート
-FREQUENCY | フリークエンシーレポート
-
-※対象のレポートにおいて、集計期間を変更しました。（3ヶ月→13ヶ月）<br>
-・アカウントレポート<br>
-・キャンペーンレポート<br>
-・広告グループレポート<br>
-・広告レポート<br>
-・リンク先URLレポート<br>
-・配信先URLレポート<br>
-・フリークエンシーレポート<br>
-<br>
-※対象のレポートにおいて、レポート項目を追加しました。<br>
-■広告レポート<br>
-　・都道府県<br>
-　・都道府県/市区郡<br>
-　・性別<br>
-　・年齢<br>
-　・サーチキーワード<br>
-■リンク先URLレポート<br>
-　・時間<br>
-　・掲載フォーマット/画像タイプ<br>
-　・画像名<br>
-　・都道府県<br>
-　・都道府県/市区郡<br>
-　・性別<br>
-　・年齢<br>
-　・サーチキーワード<br>
-　・コンバージョン名<br>
-　・コンバージョン測定の目的<br>
-<br>
-※レポート定義追加の上限数を変更しました。（1個→30個）<br>
-<br>
-※ソートのリクエスト仕様を複数項目形式に変更しました。（最大5個）<br>
-<br>
+#### 1. サイトリターゲティング機能の改善 
+サイトリターゲティング機能の変更および追加を行いました。  
+  
+※ターゲットリストの設定上限数を変更しました。（1アカウントあたり100個→300個）  
+※配信除外リストの設定が可能になりました。（配信対象リストと除外リストが両方設定された場合、配信除外リストの設定が優先されます。）  
+※ターゲットリストの条件にリファラURLの設定が可能になりました。  
+※ターゲットリストの条件において、URLの文字長を短縮しました。（1024byte → 250byte）   
+  
 * 対象ウェブサービス  
- * [ReportDefinitionService](/docs/ja/api_reference/services/ReportDefinitionService.md)
- * [ReportService](/docs/ja/api_reference/services/ReportService.md)
+ * [AdGroupTargetService](/docs/ja/api_reference/services/AdGroupTargetService.md)
+ * [RetargetingListService](/docs/ja/api_reference/services/RetargetingListService.md)
   
 * 対象データオブジェクト  
- * 各Service下にあるデータオブジェクトよりご確認ください。
+ * [SiteRetargetingTarget](/docs/ja/api_reference/data/SiteRetargetingTarget.md)
+ * [RuleCondition](/docs/ja/api_reference/data/RuleCondition.md)
   
 * 対象Enumerations  
- * 各Service下にあるデータオブジェクトよりご確認ください。
+ * [TargetListDeliverType](/docs/ja/api_reference/data/TargetListDeliverType.md)
+ * [RuleType](/docs/ja/api_reference/data/RuleType.md)
  
-#### 2. キャリア設定の変更   
-キャリア設定できる値を削除しました。<br>
-・EMOBILE<br>
-・WILLCOM<br>
+#### 2. 広告の追加  
+多くのデバイスや掲載面に対応出来る2種類の広告を追加しました。  
+・RESPONSIVE_AD（レスポンシブ）  
+・STATIC_FRAME_AD（広告枠サイズ固定）  
+  
+※サイトカテゴリー、プレイスメントターゲティング以外のターゲティング設定をご利用いただけます。  
+※配信される広告表示枠の大きさに合わせて画像のサイズが調整（縮小）されます。  
+※RESPONSIVE_ADの場合、配信される広告表示枠の形に合わせて画像がトリミングされます。  
+※RESPONSIVE_ADの入稿仕様は以下の通りです。  
+・タイトル：25文字（必須）  
+・説明文：90文字（必須）  
+・表示URL：4～50 文字（必須）  
+・リンクURL：11～1024文字（必須）  
+・画像：300×300、1200×628*（必須）  
+　※広告掲載方式「ターゲティング」の掲載フォーマット「テンプレート」内の1200×628は、現在ご利用いただけません。  
+　入稿が可能になり次第、ご連絡します。  
+・主体者表記：20文字（必須）  
+・ボタンのテキスト（任意）  
+・ロゴ画像：180×180（任意）  
+  
+※STATIC_FRAME_ADは、3種類の広告レイアウトが利用可能です。  
+  
+<table class="standard">
+  <tbody><tr>
+    <th>レイアウト名</th>
+    <th>入稿仕様</th>
+  </tr>
+  <tr>
+    <td>SQUARE_BANNER_TOP</td>
+    <td>・タイトル：15文字（必須）<br>
+・説明文：なし<br>
+・表示URL：4～29 文字（必須）<br>
+・リンクURL：11～1024文字（必須）<br>
+・画像：300×300（必須）<br>
+・主体者表記：20文字（必須）<br>
+・ボタン（任意）<br>
+・ロゴ：180×180（任意）<br>
+・カラーテーマ設定（任意）</td>
+  </tr>
+  <tr>
+    <td>WIDE_BANNER_TOP</td>
+    <td>・タイトル：20文字（必須）<br>
+・説明文：38文字（必須）<br>
+・表示URL：4～29 文字（必須）<br>
+・リンクURL：11～1024文字（必須）<br>
+・画像：1200×628（必須）<br>
+・主体者表記：20文字（必須）<br>
+・ロゴ：180×180（任意）<br>
+・カラーテーマ設定（任意）</td>
+  </tr>
+  <tr>
+    <td>WIDE_BANNER_MIDDLE</td>
+    <td>・タイトル：20文字（必須）<br>
+・説明文：25文字（必須）<br>
+・表示URL：4～29 文字（必須）<br>
+・リンクURL：11～1024文字（必須）<br>
+・画像：300×300（必須）<br>
+・主体者表記：20文字（必須）<br>
+・ボタン（任意）<br>
+・ロゴ：180×180（任意）<br>
+・カラーテーマ設定（任意）</td>
+  </tr>
+</tbody></table>
   
 * 対象ウェブサービス  
  * [AdGroupAdService](/docs/ja/api_reference/services/AdGroupAdService.md)
+ * [MediaService](/docs/ja/api_reference/services/MediaService.md)
+ * [DictionaryService](/docs/ja/api_reference/services/DictionaryService.md)
+ * [PlacementUrlIdeaService](/docs/ja/api_reference/services/PlacementUrlIdeaService.md)
   
 * 対象データオブジェクト  
- * 対象になるデータオブジェクトはありません。
-
+ * [AdGroupAd](/docs/ja/api_reference/data/AdGroupAd.md)
+ * [ResponsiveAd](/docs/ja/api_reference/data/ResponsiveAd.md)
+ * [StaticFrameAd](/docs/ja/api_reference/data/StaticFrameAd.md)
+ * [MediaRecord](/docs/ja/api_reference/data/MediaRecord.md)
+ * [ImageMedia](/docs/ja/api_reference/data/ImageMedia.md)
+ * [ColorSetSelector](/docs/ja/api_reference/data/ColorSetSelector.md)
+ * [ColorSetPage](/docs/ja/api_reference/data/ColorSetPage.md)
+ * [ColorSetValues](/docs/ja/api_reference/data/ColorSetValues.md)
+ * [ColorSet](/docs/ja/api_reference/data/ColorSet.md)
+ * [PlacementUrlIdeaSelector](/docs/ja/api_reference/data/PlacementUrlIdeaSelector.md)
+ * [AdFormatConditions](/docs/ja/api_reference/data/AdFormatConditions.md)
+  
 * 対象Enumerations  
- * 各Service下にあるデータオブジェクトよりご確認ください。
+ * [AdType](/docs/ja/api_reference/data/AdType.md)
+ * [AdLayout](/docs/ja/api_reference/data/AdLayout.md)
+ * [ButtonText](/docs/ja/api_reference/data/ButtonText.md)
+ * [LogoFlg](/docs/ja/api_reference/data/LogoFlg.md)
+ * [ColorElement](/docs/ja/api_reference/data/ColorElement.md)
 
 #### 3. Serviceの変更による各Versionへの影響  
 <table class="standard">
   <tbody><tr>
     <th valign="top"><p>Service</p></th>
-    <th valign="top"><p>Ver.5.0以前</p></th>
-    <th valign="top"><p>Ver.5.1</p></th>
+    <th valign="top"><p>Ver.4.7以前</p></th>
+    <th valign="top"><p>Ver.5.0</p></th>
   </tr>
 
   <tr>
-    <td><p>ReportDefinitionService</p></td>
-    <td><p>■APIIF変更なし</p></td>
+    <td><p>AdGroupTargetService</p></td>
+    <td><p>■APIIF変更なし<br>
+・サイトリターゲティングの設定情報に「配信除外のターゲットリスト」が1つだけ設定されている場合、GETまたはSETのレスポンスではサイトリターゲティングの設定リストは空で返ります。<br>
+　※レスポンスは空で返りますが、実際のサイトリターゲティングの設定情報には「配信除外のターゲットリスト」は設定されています。</p></td>
     <td><p>■APIIF変更あり<br>
-・Enum の "ReportType"（レポートタイプ）を "ReportCategory"（レポートカテゴリ）に変更しました。<br>
-・Enum の "ReportFrequency"（定期レポート作成タイミング）を "ReportIntervalType" に変更しました。<br>
-・"ReportFrequencyRange"（フリークエンシーの計測期間）のEnum定義を追加しました。<br>
-・"ReportDefinition"（レポート定義情報を保持するオブジェクト）に以下の変更を行いました。<br>
-　・"frequencyRange"（フリークエンシーの計測期間）を追加しました。<br>
-　・"sort"（ソート）を "sortFields[]" に変更しました。<br>
-　　（ソート用のフィールド情報の指定方法がカンマ区切りから複数項目形式に変更になります。）<br>
-　・以下のオブジェクトを削除しました：<br>
-　　・"campaignId"（キャンペーンID）<br>
-　　・"reportType"（レポート種別）<br>
-　　・"segments[]"（集計分割指定）<br>
-　・"fields[]"（表示項目）に 以下の指定が可能になりました：<br>
-　　・"AD_TYPE"（広告タイプ）<br>
-　　・"AD_STYLE"（掲載フォーマット）<br>
-　　・"MEDIA_AD_FORMAT"（ピクセルサイズ）<br>
-　　・"AD_LAYOUT"（広告レイアウト）<br>
-　　・"IMAGE_OPTION"（画像自動付与）<br>
-<br>
-■エラーコード<br>
-・テンプレートフラグの設定と他の設定項目の組合せが正しくない場合には「250001：Invalid combination in Template settings.」を返します。<br>
-・“fields”に指定できない組み合わせ項目が含まれる場合には「250002：Invalid field settings.」を返します。<br>
-・定期レポート作成タイミングの設定と他の設定項目の組み合わせが正しくない場合には「250003：Invalid combination in report date settings.」を返します。<br>
-・集計期間種別の設定と他の設定項目の組み合わせが正しくない場合には「250004：Invalid combination in date range type.」を返します。</p></td>
-  </tr>
-  <tr>
-    <td><p>ReportService</p></td>
-    <td><p>■APIIF変更なし<br></p></td>
-    <td><p>■APIIF変更あり<br>
-・"ReportClosedDateRecord"（集計完了日を保持するオブジェクト）を追加しました。<br>
-　また、レスポンスで取得可能になった"key" 値は以下のとおりです。<br>
-　・FREQ_REPORT_CLOSED_DATE<br>
-　・REPORT_CLOSED_DATE</p></td>
+・“SiteRetargetingTarget”（サイトリターゲティングの設定を保持するオブジェクト）に”targetListDeliverType”（ターゲットリスト種別）のEntityを追加しました。（種別は「配信対象」と「配信除外」））</p></td>
   </tr>
   <tr>
     <td><p>AdGroupAdService</p></td>
+    <td><p>■APIIF変更なし<br></p></td>
+    <td><p>■APIIF変更あり<br>
+・新規広告タイプ（レスポンシブ、広告枠サイズ固定）の情報を保持するオブジェクト”ResponsiveAd”と”StaticFrameAd”を追加しました。<br>
+・“AdType”（広告タイプ）に”RESPONSIVE_AD”（レスポンシブ）と”STATIC_FRAME_AD”（広告枠サイズ固定）のEnum定義を追加しました。<br>
+・“AdLayout”（広告レイアウト）のEnum定義を追加しました。<br>
+・“ButtonText”（ボタンテキスト）のEnum定義を追加しました。<br>
+<br>
+■エラーコード<br>
+・広告タイプと広告レイアウトの組み合わせが正しくない場合には「220126：Invalid pattern in ad type and layout.」を返します。<br>
+・ボタンテキストを設定、追加する際に、ボタンテキストを設定、追加できない広告タイプまたは広告レイアウトの場合には「220127：Invalid ad type.」を返します。<br>
+・カラーセットIDの指定が正しくない場合には「220128：Invalid colorSetId.」を返します。</p></td>
+  </tr>
+  <tr>
+    <td><p>BulkService</p></td>
     <td><p>■APIIF変更なし<br>
-・2015年9月より、キャリア設定で一部の値を利用できません。<br>
-　ご利用されたときは、エラーが返されます。</p></td>
+・Bulkシートの変更を行いました。<br>
+※変更点はVer.5.0と同様</p></td>
     <td><p>■APIIF変更なし<br>
-・キャリア設定で一部の値を利用できません。</p></td>
+・Bulkシートの変更を行いました。<br>
+　※以下の項目を追加しました。<br>
+　「ボタンテキスト」<br>
+　「主体者表記」<br>
+　「カラーセット」<br>
+　「ロゴ画像ID」<br>
+・新規広告タイプおよび広告レイアウトの入稿、出力を可能にしました。<br>
+・「ターゲティングの種類」に「サイトリターゲティング（配信）」と「サイトリターゲティング（除外）」の2種類の設定を可能にしました。<br>
+　※入稿、出力時に「サイトリターゲティング」の項目名を使用した場合、「サイトリターゲティング（配信）」として処理されます。</p></td>
+  </tr>
+  <tr>
+    <td><p>RetargetingListService</p></td>
+    <td><p>■APIIF変更なし<br>
+■エラーコード<br>
+ターゲットリストの作成上限に達しているため、それ以上ターゲットリストを追加できない場合には「120023：Over limit.」を返します。</p></td>
+    <td><p>■APIIF変更あり。<br>
+・ターゲットリストの上限数を1アカウントあたり300個に変更しました。<br>
+・リターゲティングの条件を保持するオブジェクト” RuleCondition”に” type”（ルールの種類）を追加しました。<br>
+・“RuleType”（条件種別）に”REFERER_URL”（リファラURL）のEnum定義を追加しました。</p></td>
+  </tr>
+  <tr>
+    <td><p>MediaService</p></td>
+    <td><p>■APIIF変更なし</p></td>
+    <td><p>■APIIF変更あり<br>
+・“ImageMedia”（画像設定内容を保持するオブジェクト）の”mediaAdFormat”（画像広告タイプ）をenum型からstring型に変更しました。<br>
+・“MediaRecord”（ 画像情報を保持するオブジェクト）に”logoFlg” （ロゴ画像フラグ）を追加しました。<br>
+※デフォルトは”FALSE”になります。<br>
+<br>
+■エラーコード<br>
+・配信フラグとロゴフラグの組み合わせが正しくない場合には「220129：Invalid combination in user status and logo flag.」を返します。<br>
+・ロゴフラグと画像フォーマットの組み合わせが正しくない場合には「220130：Invalid combination in logo flag and media format.」を返します。<br>
+・更新できない項目の指定がある場合には「220131：Field value is not updatable.」を返します。</p></td>
+  </tr>
+  <tr>
+    <td><p>DictionaryService</p></td>
+    <td><p>■APIIF変更なし</p></td>
+    <td><p>■APIIF変更あり<br>
+・広告レイアウトのテーマ設定を取得する操作である“getColorSet”を追加しました。</p></td>
+  </tr>
+  <tr>
+    <td><p>PlacementUrlIdeaService</p></td>
+    <td><p>■APIIF変更なし</p></td>
+    <td><p>■APIIF変更あり<br>
+・“PlacementUrlIdeaSelector”（ getメソッドの検索条件を保持するオブジェクト）に以下の変更を行いました。<br>
+　・”conditions”（検索キーワードとカテゴリー情報）を削除しました。<br>
+　・”keyword”（URLを検索するためのキーワード情報）を追加しました。<br>
+　・”siteCategories”（URLのカテゴリー情報）を追加しました。<br>
+　・”adFormats”（広告掲載フォーマット）を追加しました。<br>
+・広告掲載フォーマットの情報を保持するオブジェクト“adFormats”を追加しました。<br>
+・カラー設定先の要素を表すEnum定義” ColorElement”を追加しました。</p></td>
   </tr>
 </tbody></table>
-
-## 技術ドキュメント
-本リリースの内容が含まれたドキュメントは、YDN API Ver.5.1です。
-
-## WSDLファイル
-本リリースに含まれる機能を利用される場合、ダウンロードページから該当するバージョンのWSDLファイルをダウンロードしてください。
-
-## サンプルプログラム
-本リリースバージョンに対応したサンプルプログラムは、ダウンロードページから必要なサンプルプログラムをダウンロードしてください。
-
-## YDN API Ver.5.0以前のご利用について
-YDN API Ver.5.0以前も引き続きご利用いただけます。
-
-## YDN API Ver.4.6のサポート終了予定日
-YDN API Ver.4.6は、2015年12月以降にサポート終了予定です。 

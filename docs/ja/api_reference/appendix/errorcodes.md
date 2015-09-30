@@ -102,7 +102,7 @@ SOAPリクエストが成功した場合、YDN APIは HTTP 200 OKというレス
 220016 | Advance setting was made to the product or targeting that is not available.  | 指定された広告商品またはターゲティングの値では拡張設定できません。
 220113 | Unsupported ad product type.  | キャンペーンの配信方法（AdproductType）が、画像紐づけ不可となっています。
 220114 | Invalid ad style.  | 掲載フォーマットが無効です。 
-220115 | Unavailable aspect ratio of an image. | 指定したピクセルサイズをご利用いただけません。
+220115 | Unavailable aspect ratio of an image. |指定したピクセルサイズをご利用いただけません。
 220119 | Unavailable frequency cap.  | フリークエンシー設定不可な広告商品です。 
 220120 | Unmatch frequency cap.  | フリークエンシー設定の組み合わせが不正です。 
 220121 | Frequency setting was made to the product that is not available.  | 指定された広告商品ではフリークエンシー設定できません。 
