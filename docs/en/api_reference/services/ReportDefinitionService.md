@@ -241,8 +241,8 @@ Returns usable report fields by report type.
 | Parameter | Req? | Value | Description | 
 |---|---|---|---|
 | accountId | ○ | xsd:long | Account ID |
-|reportType | ○ | [enum ReportType](../data/enumReportType.md) | Report format. |
-|lang |  | [enum ReportLang](../data/enumReportLang.md) | Output language.<br>Japanese or English can be selected. | 
+|reportType | ○ | enum [ReportType](../data/ReportType.md) | Report format. |
+|lang |  | enum [ReportLang](../data/ReportLang.md) | Output language.<br>Japanese or English can be selected. | 
 
 ##### Request Sample
 ```xml

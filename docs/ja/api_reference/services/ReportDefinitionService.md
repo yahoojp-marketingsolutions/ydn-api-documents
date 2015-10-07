@@ -230,8 +230,8 @@ ReportDefinitionServiceで提供される操作を説明します。
 | パラメータ | 必須 | 値 | 説明 | 
 |---|---|---|---|
 | accountId | ○ | xsd:long | アカウントIDです。 |
-|reportType | ○ | [enum ReportType](../data/enumReportType.md) | レポートの形式です。 |
-|lang |  | [enum ReportLang](../data/enumReportLang.md) | 出力言語です。日本語と英語を指定できます。 | 
+|reportType | ○ | enum [ReportType](../data/ReportType.md) | レポートの形式です。 |
+|lang |  | enum [ReportLang](../data/ReportLang.md) | 出力言語です。日本語と英語を指定できます。 | 
 
 ##### ＜リクエストサンプル＞（標準認証）
 ```xml
