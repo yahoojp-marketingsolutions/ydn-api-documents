@@ -6,3 +6,5 @@ Referrence for supported report types.
 Referrence for parameter values and constraints.  
 ### [SOAP Error Codes](/docs/en/api_reference/appendix/errorcodes.md)
 Referrence for error codes.  
+### [Tracking Parameters](/docs/en/api_reference/appendix/tracking.md)
+Reference for tracking parameters.
