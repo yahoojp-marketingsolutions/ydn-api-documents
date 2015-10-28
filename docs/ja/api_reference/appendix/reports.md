@@ -17,7 +17,7 @@ HOUROFDAY            | 時間              | Hourly                             
 DEVICE               | デバイス            | Device                                  | device               | string
 SITECATEGORY         | サイトカテゴリー名       | Site Category                           | siteCategory         | string
 INTERESTCATEGORY     | インタレストカテゴリー名    | Interest Category                       | interestCategory     | string
-ADSTYLE              | 掲載フォーマット（画像タイプ） | Ad Format (Media Type)                  | adStyle              | string
+ADSTYLE              | 掲載フォーマット（画像タイプ） | Ad Format (Media Type)             | adStyle              | string
 DELIVER              | 広告掲載方式          | Ad&nbsp;Distribution                    | delivername          | string
 MEDIANAME            | 画像名             | Media Name                              | mediaName            | string
 MEDIAID              | 画像ID            | Media ID                                | mediaID              | long  
@@ -25,6 +25,8 @@ FILENAME             | ファイル名           | File Name                    
 PIXELSIZE            | ピクセルサイズ         | Pixel Size                              | pixelSize            | string
 SEARCHKEYWORDID      | サーチキーワードID      | Search Keyword ID                       | searchKeywordID      | long  
 SEARCHKEYWORD        | サーチキーワード        | Search Keyword                          | searchKeyword        | string
+CONVERSIONNAME      | コンバージョン名      | Conversion Name                      | conversionName      | string  
+OBJECTIVEOFCONVERSIONTRACKING      | コンバージョン測定の目的      | Objective of Conversion Tracking  | objectiveOfConversionTracking       | string  
 IMPRESSIONS          | インプレッション数       | Impressions                             | impressions          | int   
 CLICKS               | クリック数           | Clicks                                  | clicks               | int   
 CTR                  | クリック率           | CTR                                     | ctr                  | double
@@ -34,12 +36,13 @@ AVERAGECPC           | 平均CPC           | Ave.CPC                            
 TOTALCONVERSIONS     | 総コンバージョン数       | Total&nbsp;Conversions                  | totalConversions     | int   
 TOTALCONVERSIONRATE  | 総コンバージョン率       | Total&nbsp;Conversion&nbsp;Rate         | totalConversionRate  | double
 COSTTOTALCONVERSIONS | コスト/総コンバージョン数   | Cost&nbsp;/&nbsp;Total&nbsp;Conversions | costTotalConversions | double
-MEASURABLEIMPRESSIONS         | ビュー計測対象インプレッション数   | Measurable Impressions                  | measurableImpressions         | int   
-VIEWABLEIMPRESSIONS           | ビューインプレッション数       | Viewable Impressions                    | viewableImpressions           | int   
-VIEWABLEIMPRESSIONRATE        | ビューインプレッション率       | Viewable Impression Rate                | viewableImpressionRate        | double
-VIEWABLECLICKS                | ビュークリック数           | Viewable Clicks                         | viewableClicks                | int   
-VIEWABLECTR                   | ビュークリック率           | Viewable CTR                            | viewableCtr                   | double
-
+TOTALREVENUE         | 合計売上金額                | Total Revenue  | totalRevenue                 | int
+REVENUETOTALCONVERSIONS | 合計売上金額 / 総コンバージョン数    | Revenue / Total Conversion | revenueTotalConversion                 | double
+MEASURABLEIMPRESSIONS | ビュー計測対象インプレッション数 | Impressions on the measurement object   | measurableImpressions     | int
+VIEWABLEIMPRESSIONS | ビューインプレッション数   | Viewable Impressions  | viewableImpressions                 | int
+VIEWABLEIMPRESSIONRATE | ビューインプレッション率  | Viewable Impression Rate   | viewableImpressionRate     | double
+VIEWABLECLICKS          | ビュークリック数             | Viewable Clicks  | viewableClicks                   | int
+VIEWABLECTR            | ビュークリック率            | Viewable CTR         | viewableCtr                 | double
 
 ### キャンペーンレポート
 フィールド名               | 表示名(日本語)        | 表示名（英語）                                 | xml 属性               | 型/単位  
@@ -59,7 +62,7 @@ HOUROFDAY            | 時間              | Hourly                             
 DEVICE               | デバイス            | Device                                  | device               | string
 SITECATEGORY         | サイトカテゴリー名       | Site Category                           | siteCategory         | string
 INTERESTCATEGORY     | インタレストカテゴリー名    | Interest Category                       | interestCategory     | string
-ADSTYLE              | 掲載フォーマット（画像タイプ） | Ad Format (Media Type)                  | adStyle              | string
+ADSTYLE              | 掲載フォーマット（画像タイプ） | Ad Format (Media Type)             | adStyle              | string
 DELIVER              | 広告掲載方式          | Ad&nbsp;Distribution                    | delivername          | string
 MEDIANAME            | 画像名             | Media Name                              | mediaName            | string
 MEDIAID              | 画像ID            | Media ID                                | mediaID              | long  
@@ -67,6 +70,8 @@ FILENAME             | ファイル名           | File Name                    
 PIXELSIZE            | ピクセルサイズ         | Pixel Size                              | pixelSize            | string
 SEARCHKEYWORDID      | サーチキーワードID      | Search Keyword ID                       | searchKeywordID      | long  
 SEARCHKEYWORD        | サーチキーワード        | Search Keyword                          | searchKeyword        | string
+CONVERSIONNAME      | コンバージョン名      | Conversion Name                      | conversionName      | string  
+OBJECTIVEOFCONVERSIONTRACKING      | コンバージョン測定の目的      | Objective of Conversion Tracking  | objectiveOfConversionTracking       | string  
 IMPRESSIONS          | インプレッション数       | Impressions                             | impressions          | int   
 CLICKS               | クリック数           | Clicks                                  | clicks               | int   
 CTR                  | クリック率           | CTR                                     | ctr                  | double
@@ -76,11 +81,13 @@ AVERAGECPC           | 平均CPC           | Ave.CPC                            
 TOTALCONVERSIONS     | 総コンバージョン数       | Total&nbsp;Conversions                  | totalConversions     | int   
 TOTALCONVERSIONRATE  | 総コンバージョン率       | Total&nbsp;Conversion&nbsp;Rate         | totalConversionRate  | double
 COSTTOTALCONVERSIONS | コスト/総コンバージョン数   | Cost&nbsp;/&nbsp;Total&nbsp;Conversions | costTotalConversions | double
-MEASURABLEIMPRESSIONS         | ビュー計測対象インプレッション数   | Measurable Impressions                  | measurableImpressions         | int   
-VIEWABLEIMPRESSIONS           | ビューインプレッション数       | Viewable Impressions                    | viewableImpressions           | int   
-VIEWABLEIMPRESSIONRATE        | ビューインプレッション率       | Viewable Impression Rate                | viewableImpressionRate        | double
-VIEWABLECLICKS                | ビュークリック数           | Viewable Clicks                         | viewableClicks                | int   
-VIEWABLECTR                   | ビュークリック率           | Viewable CTR                            | viewableCtr                   | double
+TOTALREVENUE         | 合計売上金額                | Total Revenue  | totalRevenue                 | int
+REVENUETOTALCONVERSIONS | 合計売上金額 / 総コンバージョン数    | Revenue / Total Conversion | revenueTotalConversion                 | double
+MEASURABLEIMPRESSIONS | ビュー計測対象インプレッション数 | Impressions on the measurement object   | measurableImpressions     | int
+VIEWABLEIMPRESSIONS | ビューインプレッション数   | Viewable Impressions  | viewableImpressions                 | int
+VIEWABLEIMPRESSIONRATE | ビューインプレッション率  | Viewable Impression Rate   | viewableImpressionRate     | double
+VIEWABLECLICKS          | ビュークリック数             | Viewable Clicks  | viewableClicks                   | int
+VIEWABLECTR            | ビュークリック率            | Viewable CTR         | viewableCtr                 | double
 
 ### 広告グループレポート
 フィールド名               | 表示名(日本語)        | 表示名（英語）                                 | xml&nbsp;属性          | 型/単位  
@@ -102,7 +109,7 @@ HOUROFDAY            | 時間              | Hourly                             
 DEVICE               | デバイス            | Device                                  | device               | string
 SITECATEGORY         | サイトカテゴリー名       | Site Category                           | siteCategory         | string
 INTERESTCATEGORY     | インタレストカテゴリー名    | Interest Category                       | interestCategory     | string
-ADSTYLE              | 掲載フォーマット（画像タイプ） | Ad Format (Media Type)                  | adStyle              | string
+ADSTYLE              | 掲載フォーマット（画像タイプ） | Ad Format (Media Type)             | adStyle              | string
 DELIVER              | 広告掲載方式          | Ad&nbsp;Distribution                    | delivername          | string
 MEDIANAME            | 画像名             | Media Name                              | mediaName            | string
 MEDIAID              | 画像ID            | Media ID                                | mediaID              | long  
@@ -110,6 +117,8 @@ FILENAME             | ファイル名           | File Name                    
 PIXELSIZE            | ピクセルサイズ         | Pixel Size                              | pixelSize            | string
 SEARCHKEYWORDID      | サーチキーワードID      | Search Keyword ID                       | searchKeywordID      | long  
 SEARCHKEYWORD        | サーチキーワード        | Search Keyword                          | searchKeyword        | string
+CONVERSIONNAME      | コンバージョン名      | Conversion Name                      | conversionName      | string  
+OBJECTIVEOFCONVERSIONTRACKING      | コンバージョン測定の目的      | Objective of Conversion Tracking  | objectiveOfConversionTracking       | string  
 IMPRESSIONS          | インプレッション数       | Impressions                             | impressions          | int   
 CLICKS               | クリック数           | Clicks                                  | clicks               | int   
 CTR                  | クリック率           | CTR                                     | ctr                  | double
@@ -119,11 +128,13 @@ AVERAGECPC           | 平均CPC           | Ave.CPC                            
 TOTALCONVERSIONS     | 総コンバージョン数       | Total&nbsp;Conversions                  | totalConversions     | int   
 TOTALCONVERSIONRATE  | 総コンバージョン率       | Total&nbsp;Conversion&nbsp;Rate         | totalConversionRate  | double
 COSTTOTALCONVERSIONS | コスト/総コンバージョン数   | Cost&nbsp;/&nbsp;Total&nbsp;Conversions | costTotalConversions | double
-MEASURABLEIMPRESSIONS         | ビュー計測対象インプレッション数   | Measurable Impressions                  | measurableImpressions         | int   
-VIEWABLEIMPRESSIONS           | ビューインプレッション数       | Viewable Impressions                    | viewableImpressions           | int   
-VIEWABLEIMPRESSIONRATE        | ビューインプレッション率       | Viewable Impression Rate                | viewableImpressionRate        | double
-VIEWABLECLICKS                | ビュークリック数           | Viewable Clicks                         | viewableClicks                | int   
-VIEWABLECTR                   | ビュークリック率           | Viewable CTR                            | viewableCtr                   | double
+TOTALREVENUE         | 合計売上金額                | Total Revenue  | totalRevenue                 | int
+REVENUETOTALCONVERSIONS | 合計売上金額 / 総コンバージョン数    | Revenue / Total Conversion | revenueTotalConversion                 | double
+MEASURABLEIMPRESSIONS | ビュー計測対象インプレッション数 | Impressions on the measurement object   | measurableImpressions     | int
+VIEWABLEIMPRESSIONS | ビューインプレッション数   | Viewable Impressions  | viewableImpressions                 | int
+VIEWABLEIMPRESSIONRATE | ビューインプレッション率  | Viewable Impression Rate   | viewableImpressionRate     | double
+VIEWABLECLICKS          | ビュークリック数             | Viewable Clicks  | viewableClicks                   | int
+VIEWABLECTR            | ビュークリック率            | Viewable CTR         | viewableCtr                 | double
 
 ### 広告レポート
 フィールド名               | 表示名(日本語)        | 表示名（英語）                  | xml 属性               | 型/単位  
@@ -137,6 +148,7 @@ CAMPAIGNID           | キャンペーンID        | Campaign ID              | 
 ADGROUPNAME          | 広告グループ名         | Ad Group Name            | adgroupName          | string
 ADGROUPID            | 広告グループID        | Ad Group ID              | adgroupID            | int   
 DAY                  | 日               | Daily                    | day                  | string
+HOUROFDAY            | 時間              | Hourly                                  | hourofday            | string
 DEVICE               | デバイス            | Device                   | device               | string
 ADSTYLE              | 掲載フォーマット（画像タイプ） | Ad Format (Media Type)   | adStyle              | string
 DELIVER              | 広告掲載方式          | Ad Distribution          | delivername          | string
@@ -144,6 +156,8 @@ MEDIANAME            | 画像名             | Media Name               | mediaN
 MEDIAID              | 画像ID            | Media ID                 | mediaID              | long  
 FILENAME             | ファイル名           | File Name                | fileName             | string
 PIXELSIZE            | ピクセルサイズ         | Pixel Size               | pixelSize            | string
+CONVERSIONNAME      | コンバージョン名      | Conversion Name                      | conversionName      | string  
+OBJECTIVEOFCONVERSIONTRACKING      | コンバージョン測定の目的      | Objective of Conversion Tracking  | objectiveOfConversionTracking       | string  
 IMPRESSIONS          | インプレッション数       | Impressions              | impressions          | int   
 TITLE                | タイトル            | Title                    | title                | string
 DESCRIPTION1         | 説明文1            | Description 1            | description1         | string
@@ -157,53 +171,59 @@ AVERAGECPC           | 平均CPC           | Ave.CPC                  | averageC
 TOTALCONVERSIONS     | 総コンバージョン数       | Total Conversions        | totalConversions     | int   
 TOTALCONVERSIONRATE  | 総コンバージョン率       | Total Conversion Rate    | totalConversionRate  | double
 COSTTOTALCONVERSIONS | コスト/総コンバージョン数   | Cost / Total Conversions | costTotalConversions | double
-MEASURABLEIMPRESSIONS         | ビュー計測対象インプレッション数   | Measurable Impressions                  | measurableImpressions         | int   
-VIEWABLEIMPRESSIONS           | ビューインプレッション数       | Viewable Impressions                    | viewableImpressions           | int   
-VIEWABLEIMPRESSIONRATE        | ビューインプレッション率       | Viewable Impression Rate                | viewableImpressionRate        | double
-VIEWABLECLICKS                | ビュークリック数           | Viewable Clicks                         | viewableClicks                | int   
-VIEWABLECTR                   | ビュークリック率           | Viewable CTR                            | viewableCtr                   | double
+TOTALREVENUE         | 合計売上金額                | Total Revenue  | totalRevenue                 | int
+REVENUETOTALCONVERSIONS | 合計売上金額 / 総コンバージョン数    | Revenue / Total Conversion | revenueTotalConversion                 | double
+MEASURABLEIMPRESSIONS | ビュー計測対象インプレッション数 | Impressions on the measurement object   | measurableImpressions     | int
+VIEWABLEIMPRESSIONS | ビューインプレッション数   | Viewable Impressions  | viewableImpressions                 | int
+VIEWABLEIMPRESSIONRATE | ビューインプレッション率  | Viewable Impression Rate   | viewableImpressionRate     | double
+VIEWABLECLICKS          | ビュークリック数             | Viewable Clicks  | viewableClicks                   | int
+VIEWABLECTR            | ビュークリック率            | Viewable CTR         | viewableCtr                 | double
 
 ### リンク先URLレポート
-フィールド名               | 表示名(日本語) | 表示名（英語）                                 | xml&nbsp;属性 | 型/単位
---------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------- | ------------------------------------- | -------------------------------------------
-DESTINATIONURL       | リンク先URL                            | Destination&nbsp;URL                    | destinationURL           | string                        
-DESTINATIONURLID     | リンク先URL&nbsp;ID                    | Destination&nbsp;URL&nbsp;ID            | destinationURLID         | int                           
-DAY                  | 日                                               | Daily                                   | day                      | string                        
-DEVICE               | デバイス                                            | Device                                  | device                   | string                        
-IMPRESSIONS          | インプレッション数                                       | Impressions                             | impressions              | int                           
-CLICKS               | クリック数                                           | Clicks                                  | clicks                   | int                           
-CTR                  | クリック率                                           | CTR                                     | ctr                      | double                        
-AVERAGEPOSITION      | 平均掲載順位                                          | Ave.&nbsp;Position                      | averagePosition          | double                        
-COST                 | コスト                                             | Cost                                    | cost                     | int                           
-AVERAGECPC           | 平均CPC                              | Ave.CPC                                 | averageCpc               | double                        
-TOTALCONVERSIONS     | 総コンバージョン数                                       | Total&nbsp;Conversions                  | totalConversions         | int                           
-TOTALCONVERSIONRATE  | 総コンバージョン率                                       | Total&nbsp;Conversion&nbsp;Rate         | totalConversionRate      | double                        
-COSTTOTALCONVERSIONS | コスト/総コンバージョン数         | Cost&nbsp;/&nbsp;Total&nbsp;Conversions | costTotalConversions     | double                        
-MEASURABLEIMPRESSIONS         | ビュー計測対象インプレッション数   | Measurable Impressions                  | measurableImpressions         | int   
-VIEWABLEIMPRESSIONS           | ビューインプレッション数       | Viewable Impressions                    | viewableImpressions           | int   
-VIEWABLEIMPRESSIONRATE        | ビューインプレッション率       | Viewable Impression Rate                | viewableImpressionRate        | double
-VIEWABLECLICKS                | ビュークリック数           | Viewable Clicks                         | viewableClicks                | int   
-VIEWABLECTR                   | ビュークリック率           | Viewable CTR                            | viewableCtr                   | double
+フィールド名         | 表示名(日本語) | 表示名（英語）      | xml&nbsp;属性 | 型/単位
+-------------------- | ------------------------ | ---------------------- | ---------------- | ---------
+DESTINATIONURL       | リンク先URL          | Destination&nbsp;URL       | destinationURL    | string                        
+DESTINATIONURLID     | リンク先URL&nbsp;ID      | Destination&nbsp;URL&nbsp;ID    | destinationURLID      | int     
+DAY                  | 日                          | Daily                | day        | string                        
+DEVICE               | デバイス                | Device                   | device      | string    
+CONVERSIONNAME      | コンバージョン名      | Conversion Name                      | conversionName      | string  
+OBJECTIVEOFCONVERSIONTRACKING      | コンバージョン測定の目的      | Objective of Conversion Tracking  | objectiveOfConversionTracking       | string  
+IMPRESSIONS          | インプレッション数           | Impressions         | impressions     | int      
+CLICKS               | クリック数         | Clicks            | clicks       | int                           
+CTR                  | クリック率              | CTR                | ctr    | double                        
+AVERAGEPOSITION      | 平均掲載順位       | Ave.&nbsp;Position     | averagePosition          | double        
+COST                 | コスト                | Cost           | cost            | int                           
+AVERAGECPC           | 平均CPC                  | Ave.CPC           | averageCpc     | double                        
+TOTALCONVERSIONS     | 総コンバージョン数        | Total&nbsp;Conversions      | totalConversions    | int       
+TOTALCONVERSIONRATE  | 総コンバージョン率        | Total&nbsp;Conversion&nbsp;Rate      | totalConversionRate    | double  
+COSTTOTALCONVERSIONS | コスト/総コンバージョン数    | Cost&nbsp;/&nbsp;Total&nbsp;Conversions | costTotalConversions     | double 
+TOTALREVENUE         | 合計売上金額                | Total Revenue  | totalRevenue                 | int
+REVENUETOTALCONVERSIONS | 合計売上金額 / 総コンバージョン数    | Revenue / Total Conversion | revenueTotalConversion           | double
+MEASURABLEIMPRESSIONS | ビュー計測対象インプレッション数 | Impressions on the measurement object   | measurableImpressions     | int
+VIEWABLEIMPRESSIONS | ビューインプレッション数   | Viewable Impressions  | viewableImpressions                 | int
+VIEWABLEIMPRESSIONRATE | ビューインプレッション率  | Viewable Impression Rate   | viewableImpressionRate     | double
+VIEWABLECLICKS          | ビュークリック数             | Viewable Clicks  | viewableClicks                   | int
+VIEWABLECTR            | ビュークリック率            | Viewable CTR         | viewableCtr                 | double
 
 ### 年齢別レポート
 フィールド名               | 表示名(日本語) | 表示名（英語）                                 | xml&nbsp;属性 | 型/単位
---------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------- | ------------------------------------- | -------------------------------------------
-AGE                  | 年齢                                              | Age                                     | age                      | enum                          
-DEVICE               | デバイス                                            | Device                                  | device                   | string                        
-IMPRESSIONS          | インプレッション数                                       | Impressions                             | impressions              | int                           
-CLICKS               | クリック数                                           | Clicks                                  | clicks                   | int                           
-CTR                  | クリック率                                           | CTR                                     | ctr                      | double                        
-AVERAGEPOSITION      | 平均掲載順位                                          | Ave.&nbsp;Position                      | averagePosition          | double                        
-COST                 | コスト                                             | Cost                                    | cost                     | int                           
-AVERAGECPC           | 平均CPC                              | Ave.CPC                                 | averageCpc               | double                        
-TOTALCONVERSIONS     | 総コンバージョン数                                       | Total&nbsp;Conversions                  | totalConversions         | int                           
-TOTALCONVERSIONRATE  | 総コンバージョン率                                       | Total&nbsp;Conversion&nbsp;Rate         | totalConversionRate      | double                        
-COSTTOTALCONVERSIONS | コスト/総コンバージョン数         | Cost&nbsp;/&nbsp;Total&nbsp;Conversions | costTotalConversions     | double                        
+-------------------- | ------------------------ | ---------------------- | ---------------- | ---------
+AGE                  | 年齢           | Age        | age               | int                          
+DEVICE               | デバイス           | Device         | device                   | string                        
+IMPRESSIONS          | インプレッション数        | Impressions         | impressions              | int          
+CLICKS               | クリック数               | Clicks         | clicks                   | int                           
+CTR                  | クリック率                 | CTR             | ctr            | double        
+AVERAGEPOSITION      | 平均掲載順位               | Ave.&nbsp;Position        | averagePosition    | double     
+COST                 | コスト                    | Cost          | cost             | int                           
+AVERAGECPC           | 平均CPC                 | Ave.CPC           | averageCpc        | double      
+TOTALCONVERSIONS     | 総コンバージョン数       | Total&nbsp;Conversions      | totalConversions         | int         
+TOTALCONVERSIONRATE  | 総コンバージョン率        | Total&nbsp;Conversion&nbsp;Rate     | totalConversionRate  | double 
+COSTTOTALCONVERSIONS | コスト/総コンバージョン数  | Cost&nbsp;/&nbsp;Total&nbsp;Conversions | costTotalConversions| double
 
 ### 性別レポート
-フィールド名               | 表示名(日本語)      | 表示名（英語）                                 | xml&nbsp;属性          | 型/単位  
--------------------- | ------------- | --------------------------------------- | -------------------- | ------
-GENDER               | 性別            | Gender                                  | gender               | enum  
+フィールド名               | 表示名(日本語)      | 表示名（英語）      | xml&nbsp;属性          | 型/単位  
+-------------------- | ------------------------ | ---------------------- | ---------------- | ---------
+GENDER               | 性別            | Gender                  | gender               | string  
 DEVICE               | デバイス          | Device                                  | device               | string
 IMPRESSIONS          | インプレッション数     | Impressions                             | impressions          | int   
 CLICKS               | クリック数         | Clicks                                  | clicks               | int   
@@ -216,7 +236,7 @@ TOTALCONVERSIONRATE  | 総コンバージョン率     | Total&nbsp;Conversion&n
 COSTTOTALCONVERSIONS | コスト/総コンバージョン数 | Cost&nbsp;/&nbsp;Total&nbsp;Conversions | costTotalConversions | double
 
 ### 地域別レポート
-フィールド名               | 表示名(日本語)      | 表示名（英語）                                 | xml&nbsp;属性          | 型/単位  
+フィールド名               | 表示名(日本語)      | 表示名（英語）      | xml&nbsp;属性          | 型/単位  
 -------------------- | ------------- | --------------------------------------- | -------------------- | ------
 PREFECTURENAME       | 都道府県          | Prefectures                             | prefecture           | string
 PREFECTUREID         | 都道府県ID        | Prefecture&nbsp;ID                      | prefectureID         | string
@@ -232,8 +252,8 @@ AVERAGEPOSITION      | 平均掲載順位        | Ave.&nbsp;Position           
 COST                 | コスト           | Cost                                    | cost                 | int   
 AVERAGECPC           | 平均CPC         | Ave.CPC                                 | averageCpc           | double
 TOTALCONVERSIONS     | 総コンバージョン数     | Total&nbsp;Conversions                  | totalConversions     | int   
-TOTALCONVERSIONRATE  | 総コンバージョン率     | Total&nbsp;Conversion&nbsp;Rate         | totalConversionRate  | Double
-COSTTOTALCONVERSIONS | コスト/総コンバージョン数 | Cost&nbsp;/&nbsp;Total&nbsp;Conversions | costTotalConversions | Double
+TOTALCONVERSIONRATE  | 総コンバージョン率     | Total&nbsp;Conversion&nbsp;Rate         | totalConversionRate  | double
+COSTTOTALCONVERSIONS | コスト/総コンバージョン数 | Cost&nbsp;/&nbsp;Total&nbsp;Conversions | costTotalConversions | double
 
 ### サイトカテゴリーレポート
 フィールド名               | 表示名(日本語)      | 表示名（英語）                                 | xml&nbsp;属性          | 型/単位  
@@ -265,28 +285,6 @@ TOTALCONVERSIONS     | 総コンバージョン数     | Total&nbsp;Conversions 
 TOTALCONVERSIONRATE  | 総コンバージョン率     | Total&nbsp;Conversion&nbsp;Rate         | totalConversionRate  | double
 COSTTOTALCONVERSIONS | コスト/総コンバージョン数 | Cost&nbsp;/&nbsp;Total&nbsp;Conversions | costTotalConversions | double
 
-### フリークエンシーレポート
-フィールド名               | 表示名(日本語)      | 表示名（英語）                  | xml&nbsp;属性          | 型/単位  
--------------------- | ------------- | ------------------------ | -------------------- | ------
-DAY                  | 日             | Daily                    | day                  | string
-ACCOUNTID            | アカウントID       | Account&nbsp;ID          | accountID            | long  
-ACCOUNTNAME          | アカウント名        | Account&nbsp;Name        | accountName          | string
-CAMPAIGNNAME         | キャンペーン名       | Campaign Name            | campaignName         | string
-CAMPAIGNID           | キャンペーンID      | Campaign ID              | ampaignID            | string
-ADGROUPNAME          | 広告グループ名       | Ad Group Name            | adgroupName          | string
-ADGROUPID            | 広告グループID      | Ad Group ID              | adgroupID            | long  
-ADNAME               | 広告名           | Ad Name                  | adName               | string
-ADID                 | 広告ID          | Ad ID                    | adID                 | int   
-FREQUENCYCOUNT       | フリークエンシー回数    | Frequency Count          | frequencyCount       | int   
-UNIQUEUSER           | ユニークユーザ数      | Unique Users             | uniqueUsers          | double
-IMPRESSIONS          | インプレッション数     | Impressions              | impressions          | int   
-CLICKS               | クリック数         | Clicks                   | clicks               | int   
-CTR                  | クリック率         | CTR                      | ctr                  | double
-TOTALCONVERSIONS     | 総コンバージョン数     | Total Conversions        | totalConversions     | int   
-TOTALCONVERSIONRATE  | 総コンバージョン率     | Total Conversion Rate    | totalConversionRate  | double
-COST                 | コスト           | Cost                     | cost                 | int   
-COSTTOTALCONVERSIONS | コスト/総コンバージョン数 | Cost / Total Conversions | costTotalConversions | double
-
 ### プレイスメントレポート
 フィールド名               | 表示名(日本語)      | 表示名（英語）                  | xml&nbsp;属性          | 型/単位  
 -------------------- | ------------- | ------------------------ | -------------------- | ------
@@ -307,6 +305,28 @@ COST                 | コスト           | Cost                     | cost    
 AVERAGECPC           | 平均CPC         | Avg. CPC                 | averageCpc           | double
 TOTALCONVERSIONS     | 総コンバージョン数     | Total Conversions        | totalConversions     | int   
 TOTALCONVERSIONRATE  | 総コンバージョン率     | Total Conversion Rate    | totalConversionRate  | double
+COSTTOTALCONVERSIONS | コスト/総コンバージョン数 | Cost / Total Conversions | costTotalConversions | double
+
+### フリークエンシーレポート
+フィールド名               | 表示名(日本語)      | 表示名（英語）                  | xml&nbsp;属性          | 型/単位  
+-------------------- | ------------- | ------------------------ | -------------------- | ------
+DAY                  | 日             | Daily                    | day                  | string
+ACCOUNTID            | アカウントID       | Account&nbsp;ID          | accountID            | long  
+ACCOUNTNAME          | アカウント名        | Account&nbsp;Name        | accountName          | string
+CAMPAIGNNAME         | キャンペーン名       | Campaign Name            | campaignName         | string
+CAMPAIGNID           | キャンペーンID      | Campaign ID              | ampaignID            | string
+ADGROUPNAME          | 広告グループ名       | Ad Group Name            | adgroupName          | string
+ADGROUPID            | 広告グループID      | Ad Group ID              | adgroupID            | long  
+ADNAME               | 広告名           | Ad Name                  | adName               | string
+ADID                 | 広告ID          | Ad ID                    | adID                 | int   
+FREQUENCYCOUNT       | フリークエンシー回数    | Frequency Count          | frequencyCount       | int   
+UNIQUEUSER           | ユニークユーザ数      | Unique Users             | uniqueUsers          | double
+IMPRESSIONS          | インプレッション数     | Impressions              | impressions          | int   
+CLICKS               | クリック数         | Clicks                   | clicks               | int   
+CTR                  | クリック率         | CTR                      | ctr                  | double
+TOTALCONVERSIONS     | 総コンバージョン数     | Total Conversions        | totalConversions     | int   
+TOTALCONVERSIONRATE  | 総コンバージョン率     | Total Conversion Rate    | totalConversionRate  | double
+COST                 | コスト           | Cost                     | cost                 | int   
 COSTTOTALCONVERSIONS | コスト/総コンバージョン数 | Cost / Total Conversions | costTotalConversions | double
 
 ### レポートセグメント
