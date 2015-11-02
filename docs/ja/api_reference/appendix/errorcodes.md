@@ -1,11 +1,12 @@
 # SOAPエラーコード
 ### エラー処理概要
 SOAPリクエストが成功した場合、YDN APIは HTTP 200 OKというレスポンスコードとSOAPのレスポンスを返します。<br> SOAPリクエストの処理中にエラーが発生した場合、YDN API はエラーコードが含まれるメッセージを返します。<br>
-詳しくは[Error](/docs/ja/api_reference/data/Error.md), [ErrorDetail](/docs/ja/api_reference/data/ErrorDetail.md)を確認してください。  
+詳しくは[Error](/docs/ja/api_reference/data/Error.md),  [ErrorDetail](/docs/ja/api_reference/data/ErrorDetail.md)を確認してください。  
    
 ##### ＜レスポンスサンプル＞
 ```xml
-<SOAP-ENV:Envelopexmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">      <SOAP-ENV:Body>         
+<SOAP-ENV:Envelopexmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Body>         
       <SOAP-ENV:Fault>             
          <faultcode>faultCode</faultcode>             
          <faultstring>faultString</faultstring>             
@@ -20,12 +21,13 @@ SOAPリクエストが成功した場合、YDN APIは HTTP 200 OKというレス
 ```
 ### エラーコード
 エラーや問題が発生した時、SOAPエラーコードとエラーの内容の一覧です。
+
 #### 共通エラー
 ##### Service
 全サービス共通 
-  
-コード                      | メッセージ                                                                            | 説明                                                       
------------------------- | -------------------------------------------------------------------------------- | ---------------------------------------------------------
+
+コード         | メッセージ                  | 説明                   
+-------------- | --------------------------- | ---------------------------
 110001 | Invalid Request.  | リクエストが無効です。
 110002 | Frequency limit exceeded. Please try your request again later.  | 回数の制限を超えました。後で再試行してください。
 110003 | Invalid location.  | ロケーションが無効です。
@@ -65,23 +67,27 @@ SOAPリクエストが成功した場合、YDN APIは HTTP 200 OKというレス
 120026 | Status error.  | ステータスエラーです。
 120029 | This value is registered.  | この値は登録済みです。
 
-
 #### 入稿に関連するエラー
-##### [RetargetingListService](/docs/ja/api_reference/services/RetargetingListService.md)
-コード                      | メッセージ                                                       | 説明                                     
------------------------- | ----------------------------------------------------------- | ---------------------------------------
+##### Service
+[RetargetingListService](/docs/ja/api_reference/services/RetargetingListService.md)
+
+コード         | メッセージ                  | 説明                   
+-------------- | --------------------------- | ---------------------------
 210001 | Selected value is not approved to update.  | 選択した内容は更新が許可されておりません。 
 210002 | Cannot update from the dependency.| 依存関係があるため、更新できません。
 
-##### [AdGroupTargetService](/docs/ja/api_reference/services/AdGroupTargetService.md)
-コード                      | メッセージ                                                  | 説明                                              
------------------------- | ------------------------------------------------------ | ------------------------------------------------
-220018 | This Target settings is unavailable.  | キャンペーンの商品種別が、ターゲティング設定できない商品です。
-																
+##### Service
+[AdGroupTargetService](/docs/ja/api_reference/services/AdGroupTargetService.md)
 
-##### [BulkService](/docs/ja/api_reference/services/BulkService.md)
-コード                      | メッセージ                                                           | 説明                                             
------------------------- | --------------------------------------------------------------- | -----------------------------------------------
+コード         | メッセージ                  | 説明                   
+-------------- | --------------------------- | ---------------------------
+220018 | This Target settings is unavailable.  | キャンペーンの商品種別が、ターゲティング設定できない商品です。
+
+##### Service
+[BulkService](/docs/ja/api_reference/services/BulkService.md)
+
+コード         | メッセージ                  | 説明                   
+-------------- | --------------------------- | ---------------------------
 220001 | Over limit of uncompleted bulk download job.  | 未完了のバルクダウンロードジョブ登録数が制限を超えています。
 220002 | Over limit of bulk download job.  | バルクダウンロードジョブ登録数が制限を超えています。
 220003 | Creating bulk downloadUrl is failed.  | バルクダウンロードURL作成に失敗。
@@ -89,9 +95,11 @@ SOAPリクエストが成功した場合、YDN APIは HTTP 200 OKというレス
 220005 | Invalid bulk download request.  | バルクダウンロードURLが不正。
 220019 | Another job is in progress.  | 別のジョブを実行中です。
 
-##### [CampaignService](/docs/ja/api_reference/services/CampaignService.md),[AdGroupAdService](/docs/ja/api_reference/services/AdGroupAdService.md),[AdGroupService](/docs/ja/api_reference/services/AdGroupService.md)
-コード                      | メッセージ                                                                                         | 説明                                                                                
------------------------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------
+##### Service
+[CampaignService](/docs/ja/api_reference/services/CampaignService.md), [AdGroupAdService](/docs/ja/api_reference/services/AdGroupAdService.md), [AdGroupService](/docs/ja/api_reference/services/AdGroupService.md)
+
+コード         | メッセージ                  | 説明                   
+-------------- | --------------------------- | ---------------------------
 220006 | Unavailable value.  | 利用できない値が入力されています。
 220007 | Unavailable the adProductType.  | 指定された広告掲載方式は購入できません。
 220008 | Under examination.  | 編集データが審査中です。
@@ -116,9 +124,11 @@ SOAPリクエストが成功した場合、YDN APIは HTTP 200 OKというレス
 
 
 
-##### [MediaService](/docs/ja/api_reference/services/MediaService.md)
-コード                       | メッセージ                                                                     | 説明                                            
-------------------------- | ------------------------------------------------------------------------- | ----------------------------------------------
+##### Service
+[MediaService](/docs/ja/api_reference/services/MediaService.md)
+
+コード         | メッセージ                  | 説明                   
+-------------- | --------------------------- | ---------------------------
 220102 | Over limit of file size.  | 画像ファイルのサイズが上限を超えています。
 220103 | Unsupported filename extension.  | 画像ファイルの拡張子がGIF/JPEGと異なります。
 220104 | Only GIF89a is supported.  | GIFファイルの規格がGIF89aではありません。
@@ -141,11 +151,11 @@ SOAPリクエストが成功した場合、YDN APIは HTTP 200 OKというレス
 
 
 ### レポート処理に関連するエラー
-#### Service
-##### [ReportService](/docs/ja/api_reference/services/ReportService.md),[ReportDefinitionService](/docs/ja/api_reference/services/ReportDefinitionService.md)
+##### Service
+[ReportService](/docs/ja/api_reference/services/ReportService.md), [ReportDefinitionService](/docs/ja/api_reference/services/ReportDefinitionService.md)
 
-コード                      | メッセージ                                                                           | 説明                                                       
------------------------- | ------------------------------------------------------------------------------- | ---------------------------------------------------------
+コード         | メッセージ                  | 説明                   
+-------------- | --------------------------- | ---------------------------
 240001 | Over limit of uncompleted report download job.  | 未完了のレポートダウンロードジョブ登録数が制限を超えています。
 240002 | Over limit of report download job.  | レポートダウンロードジョブ登録数が制限を超えています。
 240003 | Invalid division specified.  | 指定された分割指定が無効です。
