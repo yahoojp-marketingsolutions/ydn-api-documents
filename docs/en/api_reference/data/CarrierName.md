@@ -6,7 +6,7 @@ CarrierName serves ad types.
 | Value | Description | 
 |---|---|
 | DOCOMO| NTT Docomo |
-| KDDI| Au KDDI |
+| KDDI| au KDDI |
 | SOFTBANK| SoftBank Mobile |
 | EMOBILE| EMOBILE |
 | WILLCOM| WILLCOM |
